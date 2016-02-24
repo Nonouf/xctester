@@ -1,5 +1,7 @@
 # Xctester
 
+[![Gem Version](https://badge.fury.io/rb/xctester.svg)](https://badge.fury.io/rb/xctester)
+
 Xctester is a basic script that run Xcode tests and generate log files for each run.
 
 ## Installation
