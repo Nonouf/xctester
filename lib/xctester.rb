@@ -40,6 +40,7 @@ module Xctester
         time = Benchmark.measure {
           proj = (File.extname($options[:project]) == ".xcworkspace")? "-workspace" : "-project"
           cmd = "xcodebuild #{proj} #{$options[:project]} -scheme '#{$options[:scheme]}' -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 6,OS=9.2' test"
+          cmd += (Gem::Specification::find_all_by_name('xcpretty').any?)? " | xcpretty --color": ""
           output = ""
 
           status = POpen4::popen4(cmd) do |stdout, stderr, stdin, pid|
