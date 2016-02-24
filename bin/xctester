@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+
+require 'xctester'
+
+xctester = Xctester::Tester.new
+xctester.run
